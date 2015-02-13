@@ -20,11 +20,7 @@ describe('Unit: MainCtrl', function() {
       expect(scope.emptyMessage).toEqual("");
   });
 
-  it('month and year to equal ', 
-    function() {
-     
- 
-  });
+  
 
 
 })
