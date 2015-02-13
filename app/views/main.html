@@ -1,0 +1,65 @@
+<div class="holder">
+<div class="row ">
+	<div class="col-sm-12 text-center ">
+		<h3 class="">Earthquakes</h3>
+		<i> Click or hover for full information </i><br/>
+		<i> Zoom with mouse scroll, double click, or by clicking country </i>
+	</div>
+</div>
+<div class="row filters">
+	<div class="col-sm-2">
+		<h5>Select Year</h5>
+		<select ng-options="month for month in yearSelect" ng-model="currentYear" ng-change="changeYear(currentYear)"></select>
+
+	</div>
+	<div class="col-sm-2">
+		<h5>Select Month</h5>
+		<select ng-options="month for month in monthSelect" ng-model="currentMonth" ng-change="changeMonth(currentMonth, currentYear)" ></select>
+
+	</div>
+
+	<div class="col-sm-4">
+		<h5>Filter by Magnitude</h5>
+		<md-slider flex class="md-primary" md-discrete ng-model="magnitudeSlide" step="1" min="1" max="10" aria-label="magnitude" ng-change="slideChange(magnitudeSlide)">
+      </md-slider>
+
+<!--       <md-input-container>
+		      <label>Magnitude</label>
+		      <input ng-model="regionName" ng-change="nameChange(regionName)" type="number">
+    	</md-input-container> -->
+	</div>
+
+	<div class="col-sm-4">
+		<h5>Filter by Region </h5>
+		 <md-input-container>
+		      <label>Region</label>
+		      <input ng-model="regionName" ng-change="nameChange(regionName)" >
+    	</md-input-container>
+	</div>
+
+	<div class="col-sm-12 filterBy"><h5>Filtering by: </h5><div ng-show="currentYear"><strong>Year </strong>: {{currentYear}}</div>  <div ng-show="currentMonth"><strong>Month</strong> : {{currentMonth}}</div>  <div ng-show="magnitudeSlide"><strong>Magnitude</strong> : {{magnitudeSlide}}</div>  <div ng-show="regionName"><strong>Region</strong> : {{regionName}}</div>
+
+<div class="alertMessage" ng-show="emptyMessage.length">{{emptyMessage}}</div></div>
+
+
+<div class="key" ng-show="myPick"><h4>Last Selected: </h4>
+		<div> <strong>Region</strong> : {{myPick.region}}</div>
+		<div> <strong>Magnitude</strong> : {{myPick.magnitude}}</div>
+		<div> <strong>Depth</strong> : {{myPick.depth}}</div>
+		<div> <strong>Time/Date</strong> : {{myPick.timedate}}</div>
+		<div> <strong>Longitude</strong> : {{myPick.lon}}</div>
+		<div> <strong>Latitude</strong> : {{myPick.lat}}</div>
+	</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- <div ng-click="changeData()">Change</div> -->
+
+
+<map-please data="myData" filters="dataCopy" on-done="done(value)"></map-please>

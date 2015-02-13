@@ -1,0 +1,127 @@
+body {
+	font-family: 'Open Sans', sans-serif;	
+	
+}
+svg {
+  border: 1px solid #ccc;
+  fill: #fff;
+}
+
+path {
+  fill: #ccc;
+  transition: 0.2s all ease-in;
+  stroke: #fff;
+  cursor:pointer;
+  stroke-width: .5px;
+}
+
+path:hover {
+ fill: #686868;
+}
+
+.pin {
+
+}
+circle {
+	/*fill: rgba(245, 15, 15, 0.42);*/
+  stroke: #000;
+  cursor:pointer;
+}
+
+circle:hover {
+  fill: #ff0000;
+}
+
+#map {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 20px;
+}
+.d3-tip {
+  line-height: 1;
+  font-weight: 300;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  transition: 0.5s opacity ease-in-out;
+}
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.pulseRing {
+      stroke-width: .2px;
+      fill: none;
+}
+
+.holder {
+  margin: 20px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.holder .title {
+  background-color: #616161;
+}
+
+.holder h5 {
+  padding: 5px;
+  border-bottom: 1px solid #CBCBCB;
+}
+
+.filters{
+  position: relative;
+  padding: 10px;
+}
+
+.filterBy div {
+  float: left;
+  width: 25%;
+}
+.alertMessage {
+  color: red;
+}
+
+select {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.active {
+ /*fill: #393939;*/
+}
+ng-view {
+  position: relative;
+}
+.key {
+  position: absolute;
+bottom: -230px;
+left: 34px;
+height: 200px;
+width: 380px;
+padding: 10px;
+background-color: rgba(255, 255, 255, 0.36);
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.key h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  margin: 5px 0;
+  border-bottom: 1px solid #CBCBCB;
+}
+
+fi
